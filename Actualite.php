@@ -11,19 +11,4 @@ class Actualite
         $this->date = $date;
         $this->contenu = $contenu;
     }
-
-    public function getTitre() :string
-    {
-        return $this->titre;
-    }
-    
-    public function setDate() :void
-    {
-        $this->date = date('Y-m-d');
-    }
-
-    public function getContenu() :string
-    {
-        return $this->contenu;
-    }
 }
