@@ -1,16 +1,12 @@
 <?php
-// Données d'actualités centralisées
-include 'articles_data.php';
-
+$pdo = require_once 'config.php';
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-
-if (!isset($articles[$id])) {
-    // id invalide -> rediriger vers la liste pour éviter d'afficher du contenu inattendu
+$stmt = $pdo->prepare('SELECT * FROM articles WHERE id = ?');
+$stmt->execute([$id]);
+$article = $stmt->fetch();
+if (!$article) {
     header('Location: article.php');
     exit;
-} else {
-    $article = $articles[$id];
-    $notFound = false;
 }
 ?>
 
