@@ -1,23 +1,11 @@
 <?php
-$articles = [
-    1 => [
-        'title' => 'Article 1 MOI MIEUX QUE TOI',
-        'excerpt' => 'C\'est une évidance',
-        'content' => 'Ceci est un article de test vraiment nul.',
-        'date' => '2025-12-15'
-    ],
-    2 => [
-        'title' => 'Aticle 2 Tibor est nul',
-        'excerpt' => 'Toujours autant une évidance',
-        'content' => 'Article de test mais véridique cette fois.',
-        'date' => '2025-12-10'
-    ],
-    3 => [
-        'title' => 'Article 3 J\' plus d\'inspi',
-        'excerpt' => 'Mais je continue quand même',
-        'content' => 'Test : encore un article de test, parce que pourquoi pas.',
-        'date' => '2025-12-05'
-    ],
+/*
+ * Static articles file archived. The application now uses the `articles` table in the database.
+ * Archived copy saved as `articles_data.php.bak` in the project root.
+ * Keeping this placeholder (empty) prevents accidental inclusion of stale data.
+ */
+
+$articles = [];
     4 => [
         'title' => 'Article 4 J\'ai faim',
         'excerpt' => 'Alors qu\'on sort du déjeuner',
