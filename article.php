@@ -1,6 +1,6 @@
 <?php
-// Données d'actualités centralisées
-include 'articles_data.php';
+$pdo = require_once 'config.php';
+$articles = $pdo->query('SELECT id, title, excerpt, date FROM articles ORDER BY date DESC')->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,6 @@ include 'articles_data.php';
 
         <ul class="article-list">
             <?php
-            // Utiliser SCRIPT_NAME pour obtenir le chemin depuis la racine (plus fiable que PHP_SELF)
             $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), "/\\");
             if ($base === '.' || $base === '/' || $base === "\\") {
                 $base = '';
